@@ -1,12 +1,10 @@
 version: 0.2
-
 env:
   variables:
-    ECR_REGISTRY: "975050105141.dkr.ecr.ca-central-1.amazonaws.com"
+    ECR_REGISTRY: "975005105141.dkr.ecr.ca-central-1.amazonaws.com"
     IMAGE_NAME: "patel-flask-app"
     IMAGE_TAG: "latest"
     CONTAINER_NAME: "patel-container"
-
 phases:
   install:
     commands:
@@ -29,7 +27,6 @@ phases:
       - echo Generating imagedefinitions.json...
       - printf "[{\"name\":\"$CONTAINER_NAME\",\"imageUri\":\"$ECR_REGISTRY/patel-ecr:$IMAGE_TAG\"}]" > imagedefinitions.json
       - echo Build completed on `date`
-
 artifacts:
   files:
     - imagedefinitions.json
