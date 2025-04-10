@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    ECR_REGISTRY: "975050105141.dkr.ecr.ca-central-1.amazonaws.com/patel-ecr"
+    ECR_REGISTRY: "975050105141.dkr.ecr.ca-central-1.amazonaws.com"
     IMAGE_NAME: "patel-flask-app"
     IMAGE_TAG: "latest"
     CONTAINER_NAME: "patel-container"
